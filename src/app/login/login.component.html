@@ -1,0 +1,7 @@
+<form [FormGroup]="loginFormGroup" (submit)="submit(loginFormGroup)">
+  <input formControlName="id" type="text">
+  <input formControlName="password" type="password">
+  <button type="submit">로그인</button>
+</form>
+
+<p>{{ id }} / {{ password }}</p>
