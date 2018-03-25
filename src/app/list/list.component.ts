@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService } from '../shared/service/post/post.service';
+import { Observable } from 'rxjs/Observable';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -6,18 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  articles: Article[];
-  constructor() {
-    this.articles = [
-      new Article('1', '테스트1', '홍승표', '2017-04-03'),
-      new Article('2', '테스트2', '홍승표', '2018-03-03'),
-      new Article('3', '테스트3', '홍승표', '2018-03-05')
-    ];
+  id: number;
+  posts$: Observable<any>;
+  constructor(private postService: PostService, private route: ActivatedRoute, private router: Router) {
    }
 
   ngOnInit() {
+    this.posts$ = this.postService.getPosts();
+    this.id = this.route.snapshot.params.id;
   }
-}
-export class Article {
-  constructor(public postingID: string, public title: string, public pWriter: string, public pDate: string) {}
+
+  write() {
+    this.router.navigate(['/']);
+  }
 }
