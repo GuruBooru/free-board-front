@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DisplayModule } from './display/display.module';
 
+import { HttpClientModule } from '@angular/common/http';
+import { CommentModule } from './display/comment/comment.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { DisplayModule } from './display/display.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DisplayModule
+    DisplayModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

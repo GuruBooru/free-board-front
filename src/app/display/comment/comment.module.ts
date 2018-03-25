@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CommentComponent } from './comment.component';
-import { HttpClientModule } from '@angular/common/http';
+import { CommentService } from '../../shared/service/comment/comment.service';
 
 @NgModule({
   imports: [
-    CommonModule,
-    HttpClientModule
+    CommonModule
   ],
   exports: [CommentComponent],
-  declarations: [CommentComponent]
+  declarations: [CommentComponent],
+  providers: [CommentService]
 })
 export class CommentModule { }
