@@ -1,0 +1,16 @@
+<form [formGroup]="LoginFormGroup" (submit)="submit(LoginFormGroup)">
+  <input formControlName="id" type="text">
+  <!-- <input [formControlName]="'id'" type="text"> -->
+  <!--
+    <div formGroupName = "password">
+      <input formControlName="origin" type="password">
+      <input formControlName="repeat" type="password">
+    </div>
+  -->
+  <input [formControl]="LoginFormGroup.get('password')" type="password">
+  <button type="submit">로그인!</button>
+</form>
+
+<p>{{ id }} {{ password }}</p>
+<p> {{ user }} </p>
+
