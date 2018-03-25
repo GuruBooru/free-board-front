@@ -1,0 +1,36 @@
+<div class="comment">
+  <p>댓글</p>
+
+  <!--조회된 댓글 목록!-->
+  <div class="comment-list">
+    <ul>
+      <li *ngFor="let comment of commentList;">
+      <!--댓글-->
+      <div class="comment-header">
+        <p class="writer-font">{{ comment.cWriter }}</p>
+        <p class="date-font">{{ comment.cDate }}</p>
+      </div>
+
+      <div class="comment-main">
+        <p>{{ comment.cContent }}</p>
+      </div>
+
+      <div class="comment-button">
+        <button (click)= "postReComment(inputWriter.value,inputPassword.value,inputContent.value)">수정</button>
+        <button (click)= "postDelComment(inputWriter.value,inputPassword.value,inputContent.value)">삭제</button>
+      </div>
+    </li>
+    </ul>
+  </div>
+
+  <!--댓글 입력란-->
+  <p>댓글 등록</p>
+  <div class="comment-input">
+    <textarea value=temp rows="10" cols="115" #inputContent></textarea>
+    <div class="comment-writer-information">
+      <input type="text" value="작성자" #inputWriter>
+      <input type="password" value="비밀번호" #inputPassword>
+      <button (click)= "postNewComment(inputWriter.value,inputPassword.value,inputContent.value)">등록</button>
+    </div>
+
+</div>

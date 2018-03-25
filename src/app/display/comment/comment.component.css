@@ -1,0 +1,44 @@
+.comment
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.comment-list
+{
+  display: inline-flex;
+  width: 800px;
+  flex-flow: row wrap;
+}
+.comment-header
+{
+  order: 1;
+}
+.writer-font
+{
+  font-size: 12pt;
+  font-weight: bold;
+}
+.date-font
+{
+  font-size: 8pt;
+  color: gray;
+}
+.comment-main
+{
+  order: 2;
+  font-size: 12pt;
+  color: gray;
+}
+.comment-button
+{
+  align-items: flex-end;
+}
+.comment-input
+{
+  width: 750px;
+}
+.comment-writer-information
+{
+}
