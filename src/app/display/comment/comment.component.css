@@ -5,15 +5,22 @@
   flex-direction: column;
   align-items: center;
 }
+li
+{
+  display: flex;
+  flex-direction: row;
+}
 .comment-list
 {
-  display: inline-flex;
+  display: flex;
   width: 800px;
-  flex-flow: row wrap;
+  flex-direction: row;
 }
 .comment-header
 {
-  order: 1;
+  display: flex;
+  width: 150px;
+  flex-direction: column;
 }
 .writer-font
 {
@@ -27,13 +34,23 @@
 }
 .comment-main
 {
-  order: 2;
+  display: flex;
+  width: 650px;
+  flex-flow: row;
+}
+.comment-content
+{
+  display: flex;
+  width: 550px;
   font-size: 12pt;
   color: gray;
 }
 .comment-button
 {
+  display: flex;
+  width: 100px;
   align-items: flex-end;
+  align-content: flex-end;
 }
 .comment-input
 {

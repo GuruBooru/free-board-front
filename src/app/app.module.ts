@@ -8,6 +8,7 @@ import { DisplayModule } from './display/display.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CommentModule } from './display/comment/comment.module';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CommentModule } from './display/comment/comment.module';
     BrowserModule,
     AppRoutingModule,
     DisplayModule,
-    HttpClientModule
+    HttpClientModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
