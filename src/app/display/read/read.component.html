@@ -13,13 +13,21 @@
 
     <div>
       <div class="Wtitle">
-       {{pTitle}}
-       <!--<form [formGroup]="readform">
+          <div *ngIf="posts$ | async as res">
+              <div *ngFor="let post of res.data">
+                {{ post.title }} <!--posting id 가 나온다 -->
+              </div> <!--resdata-->
+            </div>
+        <!--<form [formGroup]="readform">
 
        </form>-->
       </div>
       <div class="Winformation">
-        {{pName}} {{pTime}}
+          <div *ngIf="posts$ | async as res">
+              <div *ngFor="let post of res.data">
+                {{ post.pWriter }} <!--posting id 가 나온다 -->
+                {{ post.pDate }}
+              </div>
       </div>
     </div>
 
@@ -27,7 +35,10 @@
       <hr>
       <div class="wHeight">
         <div class="wWrite">
-          {{posting}}
+            <div *ngIf="posts$ | async as res">
+                <div *ngFor="let post of res.data">
+                  {{ post.pContent }}
+                </div>
         </div>
       </div>
       <hr>
@@ -39,7 +50,7 @@
       <input type="button" name="delete" value="삭제">
     </div>
 
-
+<button (click)='navigate()'>이동</button>
   </div>
 </div>
 <!--
@@ -56,3 +67,14 @@
 <form [formGroup]="readFormGroup">
     <input formControlName = "제목">
 </form>-->
+
+<div *ngIf="posts$ | async as res">
+  <div *ngFor="let post of res.data">
+    {{ post.postingID }} <!--posting id 가 나온다 -->
+  </div> <!--resdata-->
+</div>
+<!--{
+  result: 'success',
+  msg: '정상작동',
+  data: [{postid: ''}]
+}-->

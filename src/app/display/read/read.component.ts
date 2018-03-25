@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validator, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { PostService } from '../../shared/service/post/post.service';
+import { Observable } from 'rxjs/Observable';
+
 
 // import { AppService} from '../../';
 @Component({
@@ -10,6 +13,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 // providers : [appservice]
 export class ReadComponent implements OnInit {
+posts$: Observable<any>;
+
 
    readform: FormGroup;
   // fb: FormBuilder;
@@ -17,10 +22,10 @@ export class ReadComponent implements OnInit {
   pTime: String;
   pTitle: String;
   posting: String;
-  pNum: number;
+  pNum: String;
   postingInfo: any[];
-
-  constructor(private fb: FormBuilder ) {
+  id: String;
+  constructor(private fb: FormBuilder, private postService: PostService, private route: ActivatedRoute , private router: Router) {
      this.createForm();
 
    // this.pName = 'hoho';
@@ -46,6 +51,12 @@ export class ReadComponent implements OnInit {
     }
 
   ngOnInit() {
+    this.id = this.route.snapshot.params.id;
+    this.posts$ = this.postService.getPosts();
+  }
+
+  navigate() {
+    this.router.navigate(['/']); // 맨처음으로 가기
   }
 }
 

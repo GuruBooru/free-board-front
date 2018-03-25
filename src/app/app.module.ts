@@ -9,19 +9,26 @@ import { DisplayComponent } from './display/display.component';
 import { ReadComponent } from './display/read/read.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl } from '@angular/forms';
+import { ReadModule } from './display/read/read.module';
+import { DisplayModule } from './display/display.module';
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, DisplayComponent, ReadComponent
+    AppComponent, PostComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ReadModule,
+    AppRoutingModule,
+    DisplayModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
