@@ -1,0 +1,27 @@
+
+<div style="text-align:center">
+  <h1>
+    {{ page_title }}
+  </h1>
+</div>
+
+<form [formGroup]="formGroup" (submit)="add_click(formGroup)">
+
+  <div class = "titlegroup">
+    <h3>글 제목 : </h3>
+    <input formControlName="title" class = "title" type="text" size=89 />
+  </div>
+
+
+  <textarea formControlName="pContent" class = "titlegroup" type="text" name="content" ></textarea>
+
+  <div class = "usergroup">
+    <h2>글쓴이 : </h2>
+    <input formControlName="pWriter" class = "userinfo" type="text" size=10 />
+    <h2>비밀번호 : </h2>
+    <input formControlName="pPassword" class = "userinfo" type="password" size=10 />
+
+  <button type="submit" >ADD</button>
+</div>
+
+</form>
