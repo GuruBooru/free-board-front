@@ -7,18 +7,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { WriteComponent } from './write/write.component';
+import { HttpClientModule } from '@angular/common/http';
+import { WriteModule } from './write/write.module';
+import { DisplayModule } from './display/display.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    WriteComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    WriteModule,
+    HttpClientModule,
+    DisplayModule
   ],
   providers: [],
   bootstrap: [AppComponent]
