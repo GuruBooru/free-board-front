@@ -1,12 +1,7 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { DisplayComponent } from './display/display.component';
-import { ReadComponent } from './display/read/read.component';
+import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [
-  {path: '', component: DisplayComponent},
-  {path: 'post/:id', component: ReadComponent}
-]; // path가 ''일때 (뒤에 아무것도 안붙였을때)
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

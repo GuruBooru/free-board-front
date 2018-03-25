@@ -25,6 +25,10 @@ import { PostComponent } from './post/post.component';
     ReactiveFormsModule,
     ReadModule,
     AppRoutingModule,
+    DisplayModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     DisplayModule
   ],
   providers: [],

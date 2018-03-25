@@ -10,4 +10,8 @@ export class PostService {
     return this.http.get('http://13.124.113.49:3000' + '/posting-head');
   }
 
+
+  sendPost(data: any): Observable<any> {
+    return this.http.post('http://13.124.113.49:3000' + '/board-posting', data);
+  }
 }
