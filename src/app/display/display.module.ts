@@ -8,9 +8,9 @@ import { ReadModule } from './read/read.module';
 @NgModule({
   imports: [
     CommonModule,
-    ReadModule,
     ReactiveFormsModule,
-    CommentModule
+    ReadModule,
+    CommentModule,
   ],
   declarations: [DisplayComponent]
 })

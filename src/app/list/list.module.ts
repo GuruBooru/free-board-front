@@ -1,16 +1,15 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListComponent } from './list.component';
-import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { PostService } from '../shared/service/post/post.service';
+import { ListComponent } from './list.component';
 
 @NgModule({
-  declarations: [ListComponent],
   imports: [
-    CommonModule,
-    HttpClientModule
+    CommonModule
   ],
+  declarations: [ListComponent],
   providers: [PostService]
-
 })
-export class ListModule { }
+
+export class ListModule {
+}
