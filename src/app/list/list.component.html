@@ -1,0 +1,15 @@
+<div class="container">
+  <button>글쓰기</button>
+</div>
+<div class="container_top">
+  <div class="item_num">번호</div>
+  <div class="item_title">제목</div>
+  <div class="item_writer">글쓴이</div>
+  <div class="item_date">날짜</div>
+</div>
+<div class="container" *ngFor="let article of articles">
+   <div class="item_num">{{article.postingID}}</div>
+   <div class="item_title">{{article.title}}</div>
+   <div class="item_writer">{{article.pWriter}}</div>
+   <div class="item_date">{{article.pDate}}</div>
+</div>
