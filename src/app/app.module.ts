@@ -12,6 +12,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { ReadModule } from './display/read/read.module';
 import { DisplayModule } from './display/display.module';
 import { PostComponent } from './post/post.component';
+import { PostModule } from './post/post.module';
 
 
 @NgModule({
@@ -24,8 +25,7 @@ import { PostComponent } from './post/post.component';
     AppRoutingModule,
     ReactiveFormsModule,
     ReadModule,
-    AppRoutingModule,
-    DisplayModule
+    DisplayModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,15 @@
+<form [formGroup] = "loginFormGroup" (submit)="submit(loginFormGroup)"> <!--"submit(loginFormGroup)"이렇게 하는게 더 나을 수 잇음 어떤 폼인지 알 수 잇따/-->
+  <input formControlName="id" type="text"> <!--<input [formControlName]="'id'" type="text"> 이때는 여기 있는 값에 따라서 바꾸고 싶다-->
+  <input [formControl]="loginFormGroup.get('password')" type="password">
+
+  <!-- <div formGroupName="password"> <input formControlName="origin" type="password"></div> -->
+
+<button type="sibmit">로그인</button>
+</form>
+
 <p>
-  post works!
+  {{id}}/{{password}}
 </p>
+
+
+

@@ -1,50 +1,48 @@
-.container{
-  display:-webkit-flex;
-  -webkit-aglin-items:center;
+.container {
+  display: -webkit-flex;
+  -webkit-aglin-items: center;
   -webkit-justify-content: center;
 }
 
-.Pagewrap{
-  margin:0.2em;
-  width:850px;
-  height:auto;
+.Pagewrap {
+  margin: 0.2em;
+  width: 850px;
+  height: auto;
 }
 
-.Ptitle{
-  margin-top:0.5em;
+.Ptitle {
+  margin-top: 0.5em;
   font-size: 2em;
   font-weight: bolder;
 }
-.Bblock{
+.Bblock {
   height: 1.2em;
   background-color: black;
   margin-bottom: 1em;
 }
 
-
-.Wtitle{
-  font-size:1.5em;
+.Wtitle {
+  font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 0.3em;
 }
-.Winformation{
-  font-size:1em;
+.Winformation {
+  font-size: 1em;
   font-weight: 300;
 }
 
-.wWrite{
+.wWrite {
   word-break: break-all;
   vertical-align: top;
 }
 
-.wHeight{
-    height: 15em;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+.wHeight {
+  height: 15em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
-.Wbutton{
+.Wbutton {
   float: right;
-  margin-right:1em;
+  margin-right: 1em;
 }
-
