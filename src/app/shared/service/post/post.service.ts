@@ -6,7 +6,7 @@ import {Observable} from 'rxjs/Observable';
 export class PostService {
 
   constructor(private http: HttpClient) { }
-  getPosts(): Observable<any> {
-    return this.http.get('http://13.124.113.49:3000' + '/posting-head');
+  getPosts(id: number): Observable<any> {
+    return this.http.get('http://13.124.113.49:3000' + `/posting/${id}`);
    }// id: String
 }
