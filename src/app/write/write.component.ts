@@ -36,10 +36,6 @@ export class WriteComponent implements OnInit {
     });
   }
 
-  // this.http.get(this.url + 'comment/' + 1).subscribe(commentList => this.commentList);
-  // this.http.post(this.url + 'bord-posting', {cWriter, cPassword, this: this.contentNum, cContent, });
-  // this.http.post(this.url + 'comment-posting', newComment).subscribe( () => this.getComment() );
-
   add_click(formGroup: FormGroup): void {
     const newPosting = {
       title: formGroup.get('title').value,
